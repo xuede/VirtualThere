@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USBIPD GUI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>USBIPD Device Manager</h1>
+            <button id="refresh" class="button">Refresh Devices</button>
+        </header>
+        
+        <div id="status" class="status">Connecting to server...</div>
+        
+        <div id="devices" class="devices">
+            <!-- Device list will be populated here -->
+        </div>
+    </div>
+    
+    <template id="device-template">
+        <div class="device">
+            <div class="device-info">
+                <div class="device-name"></div>
+                <div class="device-details">
+                    Bus ID: <span class="busid"></span> | 
+                    VID: <span class="vid"></span> | 
+                    PID: <span class="pid"></span>
+                </div>
+            </div>
+            <div class="device-actions">
+                <button class="button attach">Attach</button>
+                <button class="button detach">Detach</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+</html>
